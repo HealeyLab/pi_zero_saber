@@ -4,7 +4,7 @@ Created on Sun Oct  3 14:24:56 2021
 
 @author: Healey
 """
-
+"""just trying out the pieces below before putting them all together"""
 
 """set up ADXL345"""
 
