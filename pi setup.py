@@ -127,3 +127,31 @@ while True:
     time.sleep(4)
   time.sleep(.1)
   
+"""animate the light strip with a couple Comets"""
+
+import board
+import time
+import adafruit_dotstar as dotstar
+
+from board import *
+from adafruit_led_animation.sequence import AnimationSequence
+import adafruit_led_animation.animation.comet as comet_animation
+import adafruit_led_animation.animation.sparkle as sparkle_animation
+import adafruit_led_animation.animation.blink as blink_animation
+import adafruit_led_animation.color as color
+
+
+dots = dotstar.DotStar(board.D6, board.D5, 30, brightness=0.2)
+
+#blink = blink_animation.Blink(dots, 0.2, color.RED)
+comet = comet_animation.Comet(dots, 0.02, color.BLUE, tail_length=12)
+comet2 = comet_animation.Comet(dots, 0.02, color.CYAN, tail_length = 12, bounce=True)
+sparkle = sparkle_animation.Sparkle(dots, 0.05, color.GREEN)
+
+animations = AnimationSequence(comet, comet2, sparkle, advance_interval=10)
+
+while True:
+    animations.animate()
+
+dots.fill(0)
+dots.show()
