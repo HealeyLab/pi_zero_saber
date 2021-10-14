@@ -102,7 +102,7 @@ def play_wav(name, loop=False):
             
             soundtemp.play(loops = -1)   #pygame plays sound indefinitely
         else:
-            soundtemp.play(loops = 1)    #pygame plays sound once
+            soundtemp.play(loops = 0)    #pygame plays sound once
         #wave_file = open('sounds/' + name + '.wav', 'rb')
         #wave = audiocore.WaveFile(wave_file)
         #audio.play(wave, loop=loop)
