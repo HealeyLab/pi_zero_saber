@@ -153,8 +153,8 @@ def power(sound, duration, reverse):
     strip.show()
     #while audio.playing:                         # Wait until audio done
         #pass
-    while pg.mixer.get_busy():
-        pass
+    #while pg.mixer.get_busy():
+        #pass
     
 def mix(color_1, color_2, weight_2):
     """
