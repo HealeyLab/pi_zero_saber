@@ -11,6 +11,8 @@ https://github.com/topshed/Pi-Saber/blob/master/PiSaber.py
 in combination with Adafruit Propmaker Light Saber Code
 
 https://github.com/adafruit/Adafruit_Learning_System_Guides/blob/main/PropMaker_Lightsaber/code.py
+
+But made for pizero_W
 """
 # pylint: disable=bare-except
 
