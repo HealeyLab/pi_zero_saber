@@ -41,6 +41,9 @@ COLOR = (100, 0, 255)  # purple
 HIT_THRESHOLD = 350 # 250
 SWING_THRESHOLD = 125
 
+#Customize speaker voluem
+SOUND_VOLUME = 0.2       #0.01 lowest, 0.99 is highest
+
 NUM_PIXELS = 30
 # NUM_PIXELS = 85
 DOTS_PIN = board.D5
@@ -97,7 +100,8 @@ def play_wav(name, loop=False):
     """
     print("playing", name)
     try:
-        soundtemp = pg.mixer.Sound('./sounds/' + name + '.wav')
+        soundtemp = pg.mixer.Sound('./sounds/' + name + '.wav')        
+        soundtemp.set_volume(SOUND_VOLUME)
         if loop == True:
             
             soundtemp.play(loops = -1)   #pygame plays sound indefinitely
@@ -206,7 +210,7 @@ while True:
             TRIGGER_TIME = time.monotonic() # Save initial time of swing
             play_wav('swing')               # Start playing 'swing' sound
             COLOR_ACTIVE = COLOR_SWING      # Set color to fade from
-            mode = 2                        # SWING mode
+            mode = 1                        # SWING mode, Adafruit originally set this to 2
         elif mode > 1:                      # If in SWING or HIT mode...
             if pg.mixer.get_busy():               # And sound currently playing... (for Adafruit version was 'if audio.playing:')
                 blend = time.monotonic() - TRIGGER_TIME # Time since triggered
