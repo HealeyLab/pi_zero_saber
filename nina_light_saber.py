@@ -33,8 +33,8 @@ import pygame as pg
 
 # CUSTOMIZE YOUR COLOR HERE:
 # (red, green, blue) -- each 0 (off) to 255 (brightest)
-# COLOR = (255, 0, 0)  # red
-COLOR = (100, 0, 255)  # purple
+COLOR = (255, 0, 0)  # red
+# COLOR = (100, 0, 255)  # purple
 # COLOR = (0, 100, 255) #cyan
 
 # CUSTOMIZE SENSITIVITY HERE: smaller numbers = more sensitive to motion
@@ -191,6 +191,7 @@ while True:
         else:                               # else is currently on...
             power('off', 1.15, True)        # Power down
             mode = 0                        # OFF mode now
+            pg.mixer.stop()                 # make sure idle hum is off
             enable.value = False
         while not switch.value:             # Wait for button release
             time.sleep(0.2)                 # to avoid repeated triggering
