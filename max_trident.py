@@ -213,7 +213,7 @@ while True:
         # just comparing thresholds...use squared values instead, save math.)
         if accel_total > HIT_THRESHOLD:   # Large acceleration = HIT
             TRIGGER_TIME = time.monotonic() # Save initial time of hit
-            play_wav('wavecrash')                 # Start playing 'hit' sound
+            play_wav('hit')                 # Start playing 'hit' sound
             #COLOR_ACTIVE = COLOR_HIT        # Set color to fade from
             comet.animate()
             mode = 3                        # HIT mode
