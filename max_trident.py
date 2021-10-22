@@ -72,7 +72,7 @@ enable.value =False
 pg.mixer.init()                         #speaker audio mixer initialize
 mode = 0                               # Initial mode = OFF
 
-strip = dotstar.DotStar(CLOCK_PIN, DOTS_PIN, 60, brightness=0.2, auto_write=False)
+strip = dotstar.DotStar(CLOCK_PIN, DOTS_PIN, NUM_PIXELS, brightness=0.2, auto_write=False)
 strip.fill(0)                          # NeoPixels off ASAP on startup
 strip.show()
 
@@ -96,7 +96,7 @@ accel.range = accel.range
 
 # "Idle" color is 1/4 brightness, "swinging" color is full brightness...
 COLOR_IDLE = (int(COLOR[0] / 1), int(COLOR[1] / 1), int(COLOR[2] / 1))
-COLOR_SWING = (100, 0, 255)  # purple
+COLOR_SWING = (255, 0, 0)  # red
 COLOR_HIT = (255, 255, 255)  # "hit" color is white
 
 def play_wav(name, loop=False):
