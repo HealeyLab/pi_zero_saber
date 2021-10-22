@@ -213,7 +213,7 @@ while True:
         # just comparing thresholds...use squared values instead, save math.)
         if accel_total > HIT_THRESHOLD:   # Large acceleration = HIT
             TRIGGER_TIME = time.monotonic() # Save initial time of hit
-            play_wav('hit')                 # Start playing 'hit' sound
+            play_wav('wave_crash')                 # Start playing 'hit' sound
             #COLOR_ACTIVE = COLOR_HIT        # Set color to fade from
             comet.animate()
             mode = 3                        # HIT mode
@@ -230,7 +230,7 @@ while True:
                 strip.fill(mix(COLOR_ACTIVE, COLOR_IDLE, blend))
                 strip.show()
             else:                           # No sound now, but still MODE > 1
-                play_wav('idle', loop=True) # Resume background hum
+                play_wav('wave_idle', loop=True) # Resume background hum
                 strip.fill(COLOR_IDLE)      # Set to idle color
                 strip.show()
                 mode = 1                    # IDLE mode now
