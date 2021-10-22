@@ -30,6 +30,7 @@ import adafruit_dotstar as dotstar
 import adafruit_adxl34x
 from adafruit_led_animation.sequence import AnimationSequence
 import adafruit_led_animation.animation.comet as comet_animation
+import adafruit_led_animation.color as color
 
 from board import *
 import pygame as pg
