@@ -194,8 +194,8 @@ while True:
     if not switch.value:                    # button pressed?
         if mode == 0:                       # If currently off...
             enable.value = True
-            power('on_thunder', 1.7, False)         # Power up!
-            play_wav('wave_idle', loop=True)     # Play background hum sound
+            power('onthunder', 1.7, False)         # Power up!
+            play_wav('waveidle', loop=True)     # Play background hum sound
             mode = 1                        # ON (idle) mode now
         else:                               # else is currently on...
             power('off', 1.15, True)        # Power down
@@ -213,7 +213,7 @@ while True:
         # just comparing thresholds...use squared values instead, save math.)
         if accel_total > HIT_THRESHOLD:   # Large acceleration = HIT
             TRIGGER_TIME = time.monotonic() # Save initial time of hit
-            play_wav('wave_crash')                 # Start playing 'hit' sound
+            play_wav('wavecrash')                 # Start playing 'hit' sound
             #COLOR_ACTIVE = COLOR_HIT        # Set color to fade from
             comet.animate()
             mode = 3                        # HIT mode
@@ -230,7 +230,7 @@ while True:
                 strip.fill(mix(COLOR_ACTIVE, COLOR_IDLE, blend))
                 strip.show()
             else:                           # No sound now, but still MODE > 1
-                play_wav('wave_idle', loop=True) # Resume background hum
+                play_wav('waveidle', loop=True) # Resume background hum
                 strip.fill(COLOR_IDLE)      # Set to idle color
                 strip.show()
                 mode = 1                    # IDLE mode now
