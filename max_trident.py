@@ -198,7 +198,7 @@ while True:
             play_wav('waveidle', loop=True)     # Play background hum sound
             mode = 1                        # ON (idle) mode now
         else:                               # else is currently on...
-            power('off', 1.15, True)        # Power down
+            power('waves', 1.15, True)        # Power down
             mode = 0                        # OFF mode now
             pg.mixer.stop()                 # make sure idle hum is off
             enable.value = False
