@@ -75,7 +75,7 @@ strip = dotstar.DotStar(CLOCK_PIN, DOTS_PIN, 60, brightness=0.2, auto_write=Fals
 strip.fill(0)                          # NeoPixels off ASAP on startup
 strip.show()
 
-comet = comet_animation.Comet(dots, .005, color.CYAN, tail_length = 10, bounce=True)
+comet = comet_animation.Comet(strip, .005, color.CYAN, tail_length = 10, bounce=True)
 
 
 switch = DigitalInOut(SWITCH_PIN)
