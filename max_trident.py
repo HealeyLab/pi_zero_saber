@@ -194,7 +194,7 @@ while True:
     if not switch.value:                    # button pressed?
         if mode == 0:                       # If currently off...
             enable.value = True
-            power('onthunder', 1.7, False)         # Power up!
+            power('rolling_thunder', 1.7, False)         # Power up!
             play_wav('waveidle', loop=True)     # Play background hum sound
             mode = 1                        # ON (idle) mode now
         else:                               # else is currently on...
