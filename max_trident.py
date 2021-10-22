@@ -40,14 +40,14 @@ import pygame as pg
 # COLOR = (255, 0, 0)  # red
 # COLOR = (100, 0, 255)  # purple
 # COLOR = (0, 100, 255) #cyan
-COLOR = (0, 0, 255)  #blue
-#COLOR = (0, 50, 255)  #greenblue
+# COLOR = (0, 0, 255)  #blue
+COLOR = (0, 50, 150)  #greenblue
 
 # CUSTOMIZE SENSITIVITY HERE: smaller numbers = more sensitive to motion
-HIT_THRESHOLD = 550 # 250
+HIT_THRESHOLD = 350 # 250
 SWING_THRESHOLD = 125
 
-#Customize speaker voluem
+#Customize speaker volume
 SOUND_VOLUME = 0.2       #0.01 lowest, 0.99 is highest
 
 NUM_PIXELS = 60
