@@ -12,7 +12,7 @@ in combination with Adafruit Propmaker Light Saber Code
 
 https://github.com/adafruit/Adafruit_Learning_System_Guides/blob/main/PropMaker_Lightsaber/code.py
 
-But made for pizero_W
+But made for pizero_W, as a trident for Poseidon 
 """
 # pylint: disable=bare-except
 
@@ -44,7 +44,7 @@ COLOR = (0, 0, 255)  #blue
 #COLOR = (0, 50, 255)  #greenblue
 
 # CUSTOMIZE SENSITIVITY HERE: smaller numbers = more sensitive to motion
-HIT_THRESHOLD = 350 # 250
+HIT_THRESHOLD = 550 # 250
 SWING_THRESHOLD = 125
 
 #Customize speaker voluem
@@ -96,7 +96,7 @@ accel.range = accel.range
 
 # "Idle" color is 1/4 brightness, "swinging" color is full brightness...
 COLOR_IDLE = (int(COLOR[0] / 1), int(COLOR[1] / 1), int(COLOR[2] / 1))
-COLOR_SWING = COLOR
+COLOR_SWING = (100, 0, 255)  # purple
 COLOR_HIT = (255, 255, 255)  # "hit" color is white
 
 def play_wav(name, loop=False):
