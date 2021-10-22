@@ -195,7 +195,7 @@ while True:
         if mode == 0:                       # If currently off...
             enable.value = True
             power('rolling_thunder', 1.7, False)         # Power up!
-            play_wav('waveidle', loop=True)     # Play background hum sound
+            play_wav('seawave01', loop=True)     # Play background hum sound
             mode = 1                        # ON (idle) mode now
         else:                               # else is currently on...
             power('waves', 1.15, True)        # Power down
@@ -230,7 +230,7 @@ while True:
                 strip.fill(mix(COLOR_ACTIVE, COLOR_IDLE, blend))
                 strip.show()
             else:                           # No sound now, but still MODE > 1
-                play_wav('waveidle', loop=True) # Resume background hum
+                play_wav('seawave01', loop=True) # Resume background hum
                 strip.fill(COLOR_IDLE)      # Set to idle color
                 strip.show()
                 mode = 1                    # IDLE mode now
