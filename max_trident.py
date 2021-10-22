@@ -50,7 +50,7 @@ SWING_THRESHOLD = 125
 #Customize speaker voluem
 SOUND_VOLUME = 0.2       #0.01 lowest, 0.99 is highest
 
-NUM_PIXELS = 30
+NUM_PIXELS = 60
 # NUM_PIXELS = 85
 DOTS_PIN = board.D5
 CLOCK_PIN = board.D6
@@ -194,7 +194,7 @@ while True:
     if not switch.value:                    # button pressed?
         if mode == 0:                       # If currently off...
             enable.value = True
-            power('rolling_thunder', 1.7, False)         # Power up!
+            power('rolling_thunder', 3, False)         # Power up!
             play_wav('seawave01', loop=True)     # Play background hum sound
             mode = 1                        # ON (idle) mode now
         else:                               # else is currently on...
